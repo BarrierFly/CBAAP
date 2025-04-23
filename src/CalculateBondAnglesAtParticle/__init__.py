@@ -34,7 +34,7 @@ class CalculateBondAnglesAtParticle(ModifierInterface):
         vectors = data.particles.bonds["Bond vectors"][bond_pairs]
         vectors[idx[0], idx[1]] *= -1
         # Get particle index triplets from topo [B,A][B,C]
-        topo[idx[0], idx[1]] =  np.flip(topo[idx[0], idx[1]])
+        topo[idx[0], idx[1]] =  np.flip(topo[idx[0], idx[1]], axis=1)
         triplets = np.column_stack((topo[:, 0, 1],topo[:, 1, :]))
         return bond_pairs, triplets, vectors
        
