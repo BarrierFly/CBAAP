@@ -9,6 +9,9 @@ Python modifier for *OVITO* that looks up all bonds connected to the specified p
 - `mode` / "Choose particle by: Index/Identifier": Choose whether input center particle is specified by index or identifier.
 - `bond_mode` / "List bonds by: Index/Identifier": Choose whether output bond pairs are listed by their index or identifier.
 
+## Output
+Likely a data table identified f"bond-angles-{self.center_particle}", with properties 'Angle' (y property), 'Particle Triplet' and 'Bond Pair'.
+
 ## Example
 ![Screenshot of OVITO Pro Desktop application](./Examples/CalculateBondAnglesAtParticleModifier.png)
 
@@ -27,4 +30,4 @@ pip install --user git+https://github.com/ovito-org/CalculateBondAnglesAtParticl
 - Tested on OVITO version 3.9.1
 
 ## Contact
-Constanze Kalcher kalcher@ovito.org
+This is what the original repository said: Constanze Kalcher kalcher@ovito.org
